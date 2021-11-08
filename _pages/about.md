@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an incoming graduate student in Cornell. \\
+I am a Ph.D. student at Cornell, supervised by [Kevin Ellis](https://www.cs.cornell.edu/~ellisk/). \\
 I got my B.S. and M.S. in CSE from Shanghai Jiao Tong University.
 
 ## Publications
