@@ -8,8 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student at Cornell, supervised by [Kevin Ellis](https://www.cs.cornell.edu/~ellisk/). \\
-I got my B.S. and M.S. in CSE from Shanghai Jiao Tong University.
+I am a 2nd-year Ph.D. student in Comptuer Science at Cornell University, advised by [Prof. Kevin Ellis](https://www.cs.cornell.edu/~ellisk/). I received my bachelor and master degrees from Shanghai Jiao Tong University. My research interest lies in generalizable, interpretable, while still powerful AI models with a focus on neuro-symbolic program synthesis methods that integrates neural networks with programmatic modules/prior. It involves many subfieds that I am excited about, such as abstraction & symbol grounding, relational reasoning, and generally structure/architecture search with constraints.
 
 ## Publications
 * **From Perception to Programs: Regularize, Overparameterize, and Amortize**\\
