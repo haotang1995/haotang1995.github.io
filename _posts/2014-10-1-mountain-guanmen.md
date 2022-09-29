@@ -2,16 +2,13 @@
 title: 'Travelling in Liaoning Province in China (关门山)'
 date: 2014-10-1
 permalink: /posts/2014/10/mountain-guanmen/
+excerpt: 'Great landscapes in Liaoning Province in China. <img src="https://haotang1995.github.io/files/17.jpg?raw=true" alt="Photo"/>'
 tags:
   - travelling
   - china
   - Liaoning
 ---
 
-Great landscapes in Liaoning Province in China.
-<p align="center">
-  <img src="https://haotang1995.github.io/files/17.jpg?raw=true" alt="Photo"/> 
-</p>
 
 ## 关门山
 <p align="center">
