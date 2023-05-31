@@ -15,7 +15,7 @@ My research interest lies in generalizable powerful AI, with a focus on neuro-sy
 ## Publications
 * **From Perception to Programs: Regularize, Overparameterize, and Amortize**\\
   Hao Tang, and Kevin Ellis\\
-  *PLDI-MAPS workshop* 2022 [[pdf](https://haotang1995.github.io/files/PLDI_MAPS_2022.pdf)].
+  *ICML* 2023, *PLDI-MAPS workshop* 2022 [[arxiv](https://arxiv.org/abs/2206.05922)].
 * **Towards Scale-Invariant Graph-related Problem Solving by Iterative Homogeneous GNNs** \\
   <ins>Hao Tang</ins>, Zhiao Huang, Jiayuan Gu, Bao-Liang Lu, and Hao Su\\
   *NeurIPS* 2020 [[arxiv](https://arxiv.org/abs/2010.13547)] [[code](https://github.com/haotang1995/IterGNN)] [[short-video](https://youtu.be/--r3HIGco6Q)] [[poster](files/IterHomoGNN_poster.pdf)] [[pdf](https://haotang1995.github.io/files/IterHomoGNN.pdf)]  [[appendix](https://haotang1995.github.io/files/IterHomoGNN_supplementary.pdf)].
