@@ -8,14 +8,15 @@ redirect_from:
   - /about.html
 ---
 
-I am a 2nd-year Ph.D. student in Comptuer Science at Cornell University, advised by [Prof. Kevin Ellis](https://www.cs.cornell.edu/~ellisk/). Prior to that, I obtained my bachelor and master degrees from Shanghai Jiao Tong University. 
+I am a 2nd-year Ph.D. student at Cornell University, advised by Prof. [Kevin Ellis](https://www.cs.cornell.edu/~ellisk/). I completed my bachelor and master degrees in Shanghai Jiao Tong University. 
 
-My research interest lies in generalizable powerful AI, with a focus on neuro-symbolic program synthesis which integrates programmatic modules/architecture/prior and neural networks to achieve better generalizability and interpretabiilty. It involves many subfieds that I am excited about, such as abstraction & symbol grounding, learning to learn (or amortized inference, neural heuristics), and generally joint optimization of discrete and continuous parameters.
+My research interest lies in the generalizability of AI models, in particular, generalizing/adapting to out-of-distribution samples (e.g., inputs of larger scales, unseen combinations, and new concepts/domains). I currently focus on neuro-symbolic program synthesis to integrate neural networks with programmatic prior for better generalizability and interpretability. It involves fields such as program synthesis, latent abstraction learning, and learning to optimize. 
 
 ## Publications
 * **From Perception to Programs: Regularize, Overparameterize, and Amortize**\\
   Hao Tang, and Kevin Ellis\\
-  *ICML* 2023 [[arxiv](https://arxiv.org/abs/2206.05922)].
+  *ICML* 2023 [[arxiv](https://arxiv.org/abs/2206.05922)],\\
+  *ICML Differentiable Everthing workshop* 2023, *PLDI MAPS symposium* 2022.
 * **Towards Scale-Invariant Graph-related Problem Solving by Iterative Homogeneous GNNs** \\
   <ins>Hao Tang</ins>, Zhiao Huang, Jiayuan Gu, Bao-Liang Lu, and Hao Su\\
   *NeurIPS* 2020 [[arxiv](https://arxiv.org/abs/2010.13547)] [[code](https://github.com/haotang1995/IterGNN)] [[short-video](https://youtu.be/--r3HIGco6Q)] [[poster](files/IterHomoGNN_poster.pdf)] [[pdf](https://haotang1995.github.io/files/IterHomoGNN.pdf)]  [[appendix](https://haotang1995.github.io/files/IterHomoGNN_supplementary.pdf)].
@@ -35,3 +36,6 @@ My research interest lies in generalizable powerful AI, with a focus on neuro-sy
   <ins>Hao Tang</ins>, Wei Liu, Wei-Long Zheng, and Bao-Liang Lu\\
   *International Conference on Neural Information Processing (ICONIP)* 2017 [[pdf](https://haotang1995.github.io/files/iconip17.pdf)].
 
+## Misc.
+* Top Reviewer of NeurIPS, 2022.
+* Contributed to Pytorch (4 commits), Pytorch-Geometric (Torch-Scatter backend) (2 commits), Tensorflow (1 commit), and gfl (graph-fused lasso) (4 commits).
