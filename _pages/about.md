@@ -38,4 +38,3 @@ My research interest lies in the generalizability of AI models, in particular, g
 
 ## Misc.
 * Top Reviewer of NeurIPS, 2022.
-* Contributed to Pytorch (4 commits), Pytorch-Geometric (Torch-Scatter backend) (2 commits), Tensorflow (1 commit), and gfl (graph-fused lasso) (4 commits).
