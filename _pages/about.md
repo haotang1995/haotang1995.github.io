@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a 2nd-year Ph.D. student at Cornell University, advised by Prof. [Kevin Ellis](https://www.cs.cornell.edu/~ellisk/). I completed my bachelor and master degrees in Shanghai Jiao Tong University. 
+I am a 3rd-year Ph.D. student at Cornell University, advised by Prof. [Kevin Ellis](https://www.cs.cornell.edu/~ellisk/). I completed my bachelor and master degrees in Shanghai Jiao Tong University. 
 
 My research interest lies in the generalizability of AI models, in particular, generalizing/adapting to out-of-distribution samples (e.g., inputs of larger scales, unseen combinations, and new concepts/domains). I currently focus on neuro-symbolic program synthesis to integrate neural networks with programmatic prior for better generalizability and interpretability. It involves fields such as program synthesis, latent abstraction learning, and learning to optimize. 
 
