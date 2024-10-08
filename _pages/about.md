@@ -8,19 +8,17 @@ redirect_from:
   - /about.html
 ---
 
-I am a 3rd-year Ph.D. student at Cornell University, advised by Prof. [Kevin Ellis](https://www.cs.cornell.edu/~ellisk/). I completed my bachelor's and master's degrees at Shanghai Jiao Tong University. 
+I am a Ph.D. student at Cornell University, advised by Prof. [Kevin Ellis](https://www.cs.cornell.edu/~ellisk/). I completed my bachelor's and master's degrees at Shanghai Jiao Tong University. 
 
 My research interest lies in the generalizability of AI models, in particular, generalizing/adapting to out-of-distribution samples (e.g., inputs of larger scales, unseen combinations, and new concepts/domains). I currently focus on neuro-symbolic program synthesis to integrate neural networks with programmatic prior for better generalizability and interpretability. It involves fields such as program synthesis, latent abstraction learning, and learning to optimize. 
 
-## Preprint
+## Publications
 * **Code Repair with LLMs gives an Exploration-Exploitation Tradeoff**\\
   Hao Tang, Keya Hu, Jin Peng Zhou, Sicheng Zhong, Wei-Long Zheng, Xujie Si, and Kevin Ellis\\
-  [[arxiv](https://arxiv.org/abs/2405.17503)].
+  *NeurIPS* 2024 [[arxiv](https://arxiv.org/abs/2405.17503)].
 * **WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment**\\
   Hao Tang, Darren Key, and Kevin Ellis\\
-  [[arxiv](https://arxiv.org/abs/2402.12275)].
-  
-## Publications
+  *NeurIPS* 2024 [[arxiv](https://arxiv.org/abs/2402.12275)].
 * **From Perception to Programs: Regularize, Overparameterize, and Amortize**\\
   Hao Tang, and Kevin Ellis\\
   *ICML* 2023 [[arxiv](https://arxiv.org/abs/2206.05922)],\\
