@@ -1,0 +1,337 @@
+---
+layout: project
+permalink: /projects/rex
+title: "REx"
+---
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>REX | Code Repair with LLMs gives an Exploration-Exploitation Tradeoff</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+
+        <link rel="stylesheet" href="{{ base_path }}/assets/css/static/css/from_openai/conversation-small-lkohtmkm.css" />
+        <link rel="stylesheet" href="{{ base_path }}/assets/css/static/css/from_openai/document-composer-ofhzvcxp.css" />
+        <link rel="stylesheet" href="{{ base_path }}/assets/css/static/css/from_openai/is-scrollable-element-i34sjb0l.css" />
+        <link rel="stylesheet" href="{{ base_path }}/assets/css/static/css/from_openai/root-jhqn5s0d.css" />
+        <link rel="stylesheet" href="{{ base_path }}/assets/css/static/css/bulma.min.css" />
+        <link rel="stylesheet" href="{{ base_path }}/assets/css/static/css/bulma-carousel.min.css" />
+        <link rel="stylesheet" href="{{ base_path }}/assets/css/static/css/bulma-slider.min.css" />
+        <link rel="stylesheet" href="{{ base_path }}/assets/css/static/css/fontawesome.all.min.css" />
+        <link rel="stylesheet" href="{{ base_path }}/assets/css/static/css/academicons.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+        <link rel="stylesheet" href="{{ base_path }}/assets/css/static/css/index.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="{{ base_path }}/assets/css/static/js/fontawesome.all.min.js"></script>
+        <script src="{{ base_path }}/assets/css/static/js/bulma-carousel.min.js"></script>
+        <script src="{{ base_path }}/assets/css/static/js/bulma-slider.min.js"></script>
+        <script src="{{ base_path }}/assets/css/static/js/index.js"></script>
+    </head>
+    <body>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h1 class="title is-1 publication-title">REx: Code Repair with LLMs gives an Exploration-Exploitation Tradeoff</h1>
+                            <div class="is-size-5 conference-authors">
+                                <span class="author-block">
+                                  <a target="_blank" href="https://haotang1995.github.io/">Hao&#160;Tang</a><sup>1</sup>, <a target="_blank" href="https://lillian039.github.io/">Keya&#160;Hu</a><sup>2</sup>,
+                                    <a target="_blank" href="https://www.linkedin.com/in/jinpeng-zhou">Jin Peng&#160;Zhou</a><sup>1</sup>, <a target="_blank" href="https://www.linkedin.com/in/si-cheng-zhong-9786881b6/">Sicheng&#160;Zhong</a><sup>3</sup>,
+                                    <br />
+                                    <a target="_blank" href="https://weilongzheng.github.io/">Weilong&#160;Zheng</a><sup>2</sup>, <a target="_blank" href="https://www.cs.toronto.edu/~six/">Xujie&#160;Si</a><sup>3</sup>,
+                                    <a target="_blank" href="https://www.cs.cornell.edu/~ellisk/">Kevin&#160;Ellis</a></a><sup>1;</sup>
+                                </span>
+                            </div>
+
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block"><sup>1</sup>Cornell University, </span>
+                                <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University, </span>
+                                <span class="author-block"><sup>3</sup>University of Toronto </span>
+                            </div>
+
+
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    <!-- TODO PDF Link. -->
+                                    <span class="link-block">
+                                        <a target="_blank" href="https://arxiv.org/abs/2405.17503" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="ai ai-arxiv"></i>
+                                            </span>
+                                            <span>arXiv</span>
+                                        </a>
+                                    </span>
+
+                                    <span class="link-block">
+                                        <a target="_blank" href="https://arxiv.org/pdf/2405.17503" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fas fa-file-pdf"></i>
+                                            </span>
+                                            <span>PDF</span>
+                                        </a>
+                                    </span>
+                                    <!-- Code Link. -->
+                                    <span class="link-block">
+                                        <a target="_blank" href="https://github.com/haotang1995/REx" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fab fa-github"></i>
+                                            </span>
+                                            <span>Code</span>
+                                        </a>
+                                    </span>
+                                    <!--<span class="link-block">-->
+                                        <!--<a target="_blank" href="https://twitter.com/DrJimFan/status/1662115266933972993" class="external-link button is-normal is-rounded is-dark">-->
+                                            <!--<span class="icon">-->
+                                                <!--<i class="fab fa-twitter"></i>-->
+                                            <!--</span>-->
+                                            <!--<span>Tweet</span>-->
+                                        <!--</a>-->
+                                    <!--</span>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .video-column {
+                margin-left: -10px;
+                margin-right: -10px;
+                margin-bottom: -15px;
+                padding-bottom: 0px;
+            }
+
+            .video-column .column {
+                padding: 0 5px;
+            }
+        </style>
+
+        <section class="section">
+            <div class="container is-max-desktop">
+                <!-- Abstract. -->
+                <div class="columns is-centered has-text-centered">
+                    <div class="column">
+                        <h2 class="title is-3">Abstract</h2>
+                        <div class="content has-text-justified">
+                            <p style="font-size: 125%;">
+                              Iteratively improving and repairing source code with large language models (LLMs), known as refinement, has emerged as a popular way of generating programs that would be too complex to construct in one shot. Given a bank of test cases, together with a candidate program, an LLM can improve that program by being prompted with failed test cases. But it remains an open question how to best iteratively refine code, with prior work employing simple greedy or breadth-first strategies. We show here that refinement exposes an explore-exploit tradeoff: exploit by refining the program that passes the most test cases, or explore by refining a lesser considered program. We frame this as an arm-acquiring bandit problem, which we solve with Thompson Sampling. The resulting LLM-based program synthesis algorithm is broadly applicable: Across loop invariant synthesis, visual reasoning puzzles, and competition programming problems, we find that our new method can solve more problems using fewer language model calls.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-widescreen">
+                <div class="rows">
+                    <div class="rows is-centered">
+                        <div class="row is-full-width">
+                            <div style="text-align: center;">
+                              <img src="{{ base_url }}/files/rex/challenges.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
+                                <br />
+                                <span style="font-size: 110%;">REx established new state-of-the-arts in three challenging code generation domains.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Introduction-->
+        <section class="section">
+            <div class="container is-max-widescreen">
+                <div class="rows">
+                    <div class="rows is-centered">
+                        <div class="row is-full-width">
+                            <h2 class="title is-3"><span class="dvima">Introduction: Code Generation and Refinement by LLMs</span></h2>
+                            <div class="content has-text-justified">
+                                <span style="font-size: 110%;">
+                                  <p><span> Using large language models (LLMs) to generate code has become increasingly popular for enhancing programmer productivity and building automated agents. With LLMs, users can simply describe their requirements in natural language, and the models generate code to match those specifications. However, LLMs do not always get the correct solution right away. Users may need to guide the model further, asking it to either debug the code based on specific errors or abandon the current attempt and regenerate the code altogether.</span></p>
+                                  <p><span>Consider a typical example of code generation with an LLM:</span></p>
+                                  <p><span><em>User Prompt:</em></span><span> Your task is to calculate </span><code><span>a^b mod 1337</span></code><span>. Please write a Python program to do it.</span><br>
+                                  <span><em>Machine Response:</em></span><span> Sure, here is the code:</span><code><span>def powmod(a, b): return math.pow(a, b) % 1337</span></code><span>.</span><br>
+                                  <span><em>User Prompt:</em></span><span> The code you provided is incorrect. Here is the error message:</span><code><span>OverflowError: math range error</span></code><span>. Please fix it.</span><br>
+                                  <span><em>Machine Response:</em></span><span> I see. Let me try again. Here is the updated code:</span><code><span>def powmod(a, b): return a ** b % 1337</span></code><span>.</span></p>
+                                  <p><span>The entire process of LLM-based code generation and refinement can be visualized as building a refinement search tree. Each node in this tree represents a code version, and each refinement by the LLM adds a new child node. Because LLMs are inherently probabilistic and can produce a wide range of potential solutions, each node could theoretically have an unlimited number of children. Additionally, users can request refinements iteratively, making this search tree infinitely broad and deep.</span></p>
+                                </span>
+                            </div>
+                            <img src="{{ base_url }}/files/rex/refinementtree.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto;" />
+                            <div class="content has-text-justified">
+                                <span style="font-size: 110%;">
+                                  <p><span>Previous methods have approached code refinement by expanding the tree using fixed strategies like Breadth-First Search (BFS) or Fixed-Width (FW), but these methods are inefficient. It often takes hundreds or even thousands of LLM queries to solve practical programming tasks, which is both costly and time-consuming. Moreover, there is no clear way to choose the optimal strategy or hyperparameters beforehand, and these fixed approaches often lack robustness across different domains and models.</span></p>
+                                </span>
+                            </div>
+                            <img src="{{ base_url }}/files/rex/baselines.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto;" />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                                    
+
+        <!--Method-->
+        <section class="section">
+            <div class="container is-max-widescreen">
+                <div class="rows">
+                    <div class="rows is-centered">
+                        <div class="row is-full-width">
+                            <h2 class="title is-3"><span class="dvima">REx: REfine, Explore, Exploit</span></h2>
+                            <div class="content has-text-justified">
+                                <span style="font-size: 110%;">
+                                  <p><span>Instead of relying on static, blind exploration strategies like traditional methods, we introduce REx, a smarter and more flexible way to adaptively expand the refinement tree. REx dynamically chooses which code to refine, leading to a more efficient search process. The REx algorithm has set new state-of-the-art results across three diverse domains, demonstrating its robustness and generalizability across different types of tasks and LLMs. Moreover, it is straightforward to implement with just a few lines of code, and it saves 10-80% of LLM requests compared to baseline methods, depending on the domain.</span></p>
+                                  <p><span>REx is inspired by two simple principles drawn from human programming experience:</span>
+                                    <ul data-spread="false"><li><p><span><strong>Focus on Promising Code:</strong></span><span> Some code versions are closer to being correct than others, so it makes sense to prioritize refining those first.</span></p></li><li><p><span><strong>Avoid Over-Focusing:</strong></span><span> If a particular code has been refined too many times without success, it is better to move on and explore other possibilities.</span></p></li></ul>
+                                  </p>
+                                </span>
+                            </div>
+                            <br />
+                            <h3 class="title is-4">Code Repair with LLMs gives an Exploration-Exploitation Tradeoff</h3>
+                            <div class="content has-text-justified">
+                                <span style="font-size: 110%;">
+                                  <p><span>Consider a simple refinement tree where the agent decides to regenerate twice, resulting in two versions of code. One version passes 80% of the test cases, while the other passes 60%. As a smart human agent, what would you do? Would you refine the 80% accurate code, the 60% accurate one, or regenerate from scratch? Assuming the pass rate on test cases is a reasonable heuristic for code quality, it makes sense to refine the 80% accurate code first.</span></p>
+                                </span>
+                            </div>
+                            <img src="{{ base_url }}/files/rex/example-1-1.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto;" />
+                            <span style="font-size: 110%;">
+                              <p><span>Now, suppose the refined version of the 80% code ends up with 0% accuracy. What would you do next? Would you continue refining the 80%, the 60%, the 0%, or regenerate? It is likely that you are now less inclined to continue refining the 80% accurate code.</span></p>
+                            </span>
+                            <img src="{{ base_url }}/files/rex/example-2.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto;" />
+                            <span style="font-size: 110%;">
+                              <p><span>This scenario illustrates the exploration-exploitation dilemma in expanding the refinement tree. Initially, it makes sense to focus on refining the better-performing codes. However, if refining one code fails too many times, it is wiser to explore other less-refined options.</span></p>
+                            </span>
+
+                            <br />
+                            <br />
+
+                            <h3 class="title is-4">REx algorithm, Thompson Sampling for Arm-Acquiring Bandit</h3>
+                            <div class="content has-text-justified">
+                                <span style="font-size: 110%;">
+                                  <p><span>To properly balance the exploration-exploitation tradeoff, we frame the refinement tree expansion problem as a bandits problem and incorporate a bandits algorithm, Thompson Sampling, to solve it. Concretely, each arm/action corresponds to refining each code. The reward is whether the refinement succeeds. It's easy to incorporate heuristic values such as pass rates as the prior in Thompson Sampling. At each step of the REx algorithm, it decides which code to refine by sampling the beta distributions:</span></p>
+                                  <div class="notranslate" spellcheck="true" placeholder=" " contenteditable="true" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgb(55, 53, 47); padding: 3px 2px;"><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>e</mi><mi>t</mi><mi>a</mi><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>C</mi><mo>∗</mo><mi>h</mi><mo separator="true">,</mo><mn>1</mn><mo>+</mo><mi>C</mi><mo>∗</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>h</mi><mo stretchy="false">)</mo><mo>+</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Beta(1+C*h, 1+C*(1-h)+N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">h</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">h</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)</span></span></span></span></span><span>&#xFEFF;</span></span>&ZeroWidthSpace;</div>
+                                  <div class="notranslate" spellcheck="true" placeholder="" contenteditable="true" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgb(55, 53, 47); padding: 3px 2px;">where <span data-token-index="1" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span></span><span>&#xFEFF;</span></span> is the heuristic value such as the pass rate of the code to refine, <span data-token-index="3" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span><span>&#xFEFF;</span></span> is the number of times that we have failed to refine this code, and <span data-token-index="5" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></span><span>&#xFEFF;</span></span> is a hyper-parameter. At each step, we draw one number from this distribution for each code and then choose to refine the code with the maximum drawn number. Here is the code to implement REx in ten lines:</div>
+                                     <pre><code>
+<span style="color: #61afef;">def</span> REx(problem, C):
+  programs = {problem.empty_solution()}
+  failed_cnt = defaultdict(<span style="color: #61afef;">lambda</span>: 0) <span style="color: #808080;"># N<sub>ρ</sub> in paper</span>
+  <span style="color: #61afef;">while</span> True:
+    program = <span style="color: #61afef;">max</span>(programs, key=<span style="color: #61afef;">lambda</span> p: np.beta(
+      1 + C*p.heuristic_value, <span style="color: #808080;"># 1 + C × h(ρ)</span>
+      1 + C*(1-p.heuristic_value)+failed_cnt[p] <span style="color: #808080;"># 1 + C × (1 − h(ρ)) + N<sub>ρ</sub></span>
+    ))
+    new_program = program.refine(problem) <span style="color: #808080;"># ρ′ ∼ P<sub>refine</sub>(·|ρ, Φ)</span>
+    <span style="color: #61afef;">if</span> is_solved(problem, new_program): <span style="color: #808080;"># ρ′ ⊢ Φ in paper</span>
+      <span style="color: #61afef;">return</span> new_program
+    failed_cnt[program] += 1
+    programs.add(new_program)
+                                  </code></pre>
+                              </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Experiments-->
+        <section class="section">
+            <div class="container is-max-widescreen">
+                <div class="rows">
+                    <div class="rows is-centered">
+                        <div class="row is-full-width">
+                            <h2 class="title is-3"><span class="dvima">Experiments</span></h2>
+                            <div class="content has-text-justified">
+                                <p style="font-size: 125%;">
+                                    We systematically evaluate REx in three diverse challenging code generation tasks: loop invariant synthesis, visual reasoning puzzles, and competition programming problems. We also exvaluate REx with four different LLMs: GPT-4, GPT-3.5-turbo, Claude-3.5-Sonnet, and Llama-3.1-405B. REx outperforms the baselines in all three tasks and across all four LLMs, demonstrating its robustness and generalizability.
+                                </p>
+                            </div>
+                            <br />
+                            <br />
+
+                            <h3 class="title is-4"><span class="dvima">Varying Domains</span></h3>
+                            <img src="{{ base_url }}/files/rex/results-various-domains.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto;" />
+                            <span style="font-size: 110%;">
+                              As shown in the above figure, REx established new SOTAs and consistently outperforms the baselines across three diverse domains: loop invariant synthesis, visual reasoning puzzles, and competition programming problems. <em>Dark lines show performance with the best hyper-parameter setting for each method. Light lines show each run on each hyperparameter. The inset box plots show the distribution while varying the hyper-parameters.</em>
+                            </span>
+                            <br />
+                            <br />
+
+                            <h3 class="title is-4"><span class="dvima">Varying LLMs</span></h3>
+                            <img src="{{ base_url }}/files/rex/results-varying-llms.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto;" />
+                            <div class="content has-text-justified">
+                                <span style="font-size: 110%;">
+                                  We further evaluate REx with three more LLMs: GPT-3.5-turbo, Claude-3.5-Sonnet, and Llama-3.1-405B other than GPT-4 for the competition programming domain with the APPS Competition-level benchmark. REx consistently outperforms the baselines across all four LLMs, demonstrating its robustness and generalizability. 
+                                </span>
+                            </div>
+                            <br />
+                            <br />
+
+                            <h3 class="title is-4"><span class="dvima">Saving LLM Queries</span></h3>
+                            <img src="{{ base_url }}/files/rex/cost-saving.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto;" />
+                            <div class="content has-text-justified">
+                                <span style="font-size: 110%;">
+                                  We compare the number of LLM queries used by REx and the baselines to achieve the previous state-of-the-art performance. REx saves 10-80% of LLM queries compared to the baselines, depending on the domain. The results show that REx is more efficient and cost-effective than the baselines.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Conclusion-->
+        <section class="section">
+            <div class="container is-max-widescreen">
+                <div class="rows">
+                    <div class="rows is-centered">
+                        <div class="row is-full-width">
+                            <h2 class="title is-3"><span class="dvima">Conclusion</span></h2>
+                            <div class="content has-text-justified">
+                                <p style="font-size: 125%;">
+                                  In this work, we demonstrate that code repair with LLMs involves a critical exploration-exploitation tradeoff. Fixed offline refinement strategies are often suboptimal; instead, incorporating dynamic, online guidance is essential for balancing this tradeoff effectively. REx achieves superior performance across three domains and four different LLMs, proving its capability to significantly reduce LLM costs while maintaining high efficiency. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="BibTeX">
+            <div class="container is-max-widescreen content">
+                <h2 class="title">BibTeX</h2>
+                <pre><code>@article{tang2024code,
+  title={Code Repair with LLMs gives an Exploration-Exploitation Tradeoff},
+  author={Tang, Hao and Hu, Keya and Zhou, Jin Peng and Zhong, Sicheng and Zheng, Wei-Long and Si, Xujie and Ellis, Kevin},
+  journal={arXiv preprint arXiv:2405.17503},
+  year={2024}
+}</code></pre>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column">
+                        <div class="content has-text-centered">
+                            <p>
+                                Website template borrowed from <a href="https://voyager.minedojo.org/" target="_blank">Voyager</a>, <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">NeRFies</a>, <a href="https://github.com/cliport/cliport.github.io" target="_blank">CLIPort</a>, and
+                                <a href="https://github.com/vimalabs/vimalabs.github.io" target="_blank">VIMA</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
