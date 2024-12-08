@@ -208,7 +208,7 @@ title: "WorldCoder"
                              <br />
                             <img src="{{ base_url }}/files/worldcoder/soko-result.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
                              <br />
-                            <ul style="font-size: 110%;">
+                            <ul style="font-size: 110%;"  data-spread="false">
                               <li> <strong>Generalization</strong>: WorldCoder's programmatic world models generalize effectively to new scenarios, such as adapting from a 2-box Sokoban environment to a 3-box environment without additional training. </li>
                               <li> <strong>Sample-Efficiency</strong>: While neural-based methods require millions of interactions, WorldCoder achieves comparable results with just hundreds. </li>
                               <li> <strong>Computational Efficiency</strong>: Classic LLM agents like ReAct rely on frequent LLM queries. In contrast, WorldCoder front-loads LLM use, reducing overall computational cost. </li>
@@ -221,14 +221,14 @@ title: "WorldCoder"
                              <br />
                             <img src="{{ base_url }}/files/worldcoder/minigrid-result.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
                              <br />
-                            <ul style="font-size: 110%;">
+                            <ul style="font-size: 110%;"  data-spread="false">
                               <li><strong>Adaptability and Transfer</strong>: WorldCoder excels in adapting and transferring knowledge to new tasks. For example, solving the “unlock” task from scratch typically requires hundreds of interactions to learn navigation, key-picking, and door-opening. However, WorldCoder transfers knowledge from the “door-key” environment, enabling near-zero-shot generalization by simply synthesizing a new reward function given the new text goal.</li>
                               <li><strong>Sample Efficient Exploration with the Optimistic Objective</strong>: The optimistic objective significantly enhances sample-efficient exploration, particularly in challenging environments like Minigrid and AlfWorld. This approach allows the agent to discover effective strategies even in sparse-reward scenarios, where exploration is typically more difficult.</li>
                               </ul>
                              <br />
                               <img src="{{ base_url }}/files/worldcoder/alfworld-result.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
                              <br />
-                              <ul style="font-size: 110%;">
+                              <ul style="font-size: 110%;"  data-spread="false">
                                 <li><strong>Interpretability</strong>: Programmatic world models offer exceptional clarity and auditability. By examining the generated code, one can directly see which knowledge has been acquired and how it is represented. This transparency also highlights where additional interactions with the environment are needed to expand the agent's understanding.</li>
                               </ul>
                             </p>
