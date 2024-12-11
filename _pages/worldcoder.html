@@ -306,14 +306,14 @@ title: "WorldCoder"
                                 RL,</b> at a
                             <b>fraction of the LLM cost of ReAct.</b>
                         </ul>
-
+                        <br>
                         <center>
                             <video controls muted autoplay loop width="40%">
                                 <source src="{{ base_url }}/files/worldcoder/tele-sokoban.webm" type="video/webm" />
                             </video>
                         </center>
-                        <br />
-                        <h4 class="title is-4">World Model</h4>
+                        <br>
+                        <h4 class="title is-5">World Model</h4>
                         <br>
                         <pre><code class="language-python">class Entity:
         def __init__(self, x, y):
@@ -415,7 +415,7 @@ title: "WorldCoder"
                 return True
         return False</code></pre>
                         <br> <br>
-                        <h4 class="title is-4">Reward Function</h4>
+                        <h4 class="title is-5">Reward Function</h4>
                         <br>
                         <pre><code>def reward_func(state, action, next_state):
         targets_state = get_entities_by_name(state, 'Target')
