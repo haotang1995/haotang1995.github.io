@@ -307,11 +307,9 @@ title: "WorldCoder"
                             <b>fraction of the LLM cost of ReAct.</b>
                         </ul>
                         <br />
-                        <div class="columns">
-                            <div class="column">
-                                <h4 class="title is-4">World Model</h4>
-                                <br>
-                                <pre><code class="language-python">class Entity:
+                        <h4 class="title is-4">World Model</h4>
+                        <br>
+                        <pre><code class="language-python">class Entity:
         def __init__(self, x, y):
             self.name = self.__class__.__name__
             self.x = x
@@ -410,10 +408,10 @@ title: "WorldCoder"
                 entity.y = other_teleporter.y
                 return True
         return False</code></pre>
-                                <br> <br>
-                                <h4 class="title is-4">Reward Function</h4>
-                                <br>
-                                <pre><code>def reward_func(state, action, next_state):
+                        <br> <br>
+                        <h4 class="title is-4">Reward Function</h4>
+                        <br>
+                        <pre><code>def reward_func(state, action, next_state):
         targets_state = get_entities_by_name(state, 'Target')
         boxes_state = get_entities_by_name(state, 'Box')
         targets_next_state = get_entities_by_name(next_state, 'Target')
@@ -431,26 +429,22 @@ title: "WorldCoder"
         if done:
             reward += 10  # Adding 10 bonus for completing the game
         return reward, done</code></pre>
-                            </div>
-                            <div class="column">
 
-                                <center>
-                                    <video controls muted autoplay loop width="40%">
-                                        <source src="{{ base_url }}/files/worldcoder/tele-sokoban.webm"
-                                            type="video/webm" />
-                                    </video>
-                                </center>
+                        <center>
+                            <video controls muted autoplay loop width="40%">
+                                <source src="{{ base_url }}/files/worldcoder/tele-sokoban.webm" type="video/webm" />
+                            </video>
+                        </center>
 
 
-                            </div>
-                        </div>
                         <!-- <video controls="" muted="" autoplay="" loop="" width="40%">
                                 <source src="{{ base_url }}/files/worldcoder/tele-sokoban.mp4" type="video/mp4">
                             </video> -->
 
                         <br />
                         <span style="font-size: 125%;">Additionally, in environments designed to be outside LLM
-                            pretraining corpora, WorldCoder demonstrates its ability to learn novel dynamics, such
+                            pretraining corpora, WorldCoder demonstrates its ability to learn novel dynamics,
+                            such
                             as
                             using teleporters in Sokoban for more efficient problem-solving.</span>
                         <br />
@@ -462,17 +456,20 @@ title: "WorldCoder"
                             <li><strong>Adaptability and Transfer</strong>: WorldCoder excels in adapting and
                                 transferring knowledge to new tasks. For example, solving the “unlock” task from
                                 scratch
-                                typically requires hundreds of interactions to learn navigation, key-picking, and
+                                typically requires hundreds of interactions to learn navigation, key-picking,
+                                and
                                 door-opening. However, WorldCoder transfers knowledge from the “door-key”
                                 environment,
-                                enabling near-zero-shot generalization by simply synthesizing a new reward function
+                                enabling near-zero-shot generalization by simply synthesizing a new reward
+                                function
                                 given the new text goal.</li> <br>
                             <li><strong>Sample Efficient Exploration with the Optimistic Objective</strong>: The
                                 optimistic objective significantly enhances sample-efficient exploration,
                                 particularly
                                 in challenging environments like Minigrid and AlfWorld. This approach allows the
                                 agent
-                                to discover effective strategies even in sparse-reward scenarios, where exploration
+                                to discover effective strategies even in sparse-reward scenarios, where
+                                exploration
                                 is
                                 typically more difficult.</li>
                         </ul>
@@ -485,7 +482,8 @@ title: "WorldCoder"
                                 clarity
                                 and auditability. By examining the generated code, one can directly see which
                                 knowledge
-                                has been acquired and how it is represented. This transparency also highlights where
+                                has been acquired and how it is represented. This transparency also highlights
+                                where
                                 additional interactions with the environment are needed to expand the agent's
                                 understanding.</li>
                         </ul>
