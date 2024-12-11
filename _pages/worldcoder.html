@@ -427,70 +427,73 @@ title: "WorldCoder"
         else:
             reward = -0.1  # no box was moved onto a target
         # Determine if the game is finished
-        done = all(any(box.x == target.x and box.y == target.y for box in boxes_next_state) for target in targets_next_state)    if done:
+        done = all(any(box.x == target.x and box.y == target.y for box in boxes_next_state) for target in targets_next_state)    
+        if done:
             reward += 10  # Adding 10 bonus for completing the game
         return reward, done</code></pre>
                             </div>
                             <div class="column">
 
-                                <video controls muted autoplay loop width="40%">
-                                    <source src="{{ base_url }}/files/worldcoder/tele-sokoban.webm" type="video/webm" />
-                                </video>
+                                <center>
+                                    <video controls muted autoplay loop width="40%">
+                                        <source src="{{ base_url }}/files/worldcoder/tele-sokoban.webm"
+                                            type="video/webm" />
+                                    </video>
+                                </center>
+
+
                             </div>
-                            <center>
-                                <!-- <video controls="" muted="" autoplay="" loop="" width="40%">
+                        </div>
+                        <!-- <video controls="" muted="" autoplay="" loop="" width="40%">
                                 <source src="{{ base_url }}/files/worldcoder/tele-sokoban.mp4" type="video/mp4">
                             </video> -->
 
-                            </center>
-
-
-                            <br />
-                            <span style="font-size: 125%;">Additionally, in environments designed to be outside LLM
-                                pretraining corpora, WorldCoder demonstrates its ability to learn novel dynamics, such
-                                as
-                                using teleporters in Sokoban for more efficient problem-solving.</span>
-                            <br />
-                            <br />
-                            <img src="{{ base_url }}/files/worldcoder/minigrid-result.png" class="interpolation-image"
-                                alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
-                            <br />
-                            <ul style="font-size: 125%;" data-spread="false">
-                                <li><strong>Adaptability and Transfer</strong>: WorldCoder excels in adapting and
-                                    transferring knowledge to new tasks. For example, solving the “unlock” task from
-                                    scratch
-                                    typically requires hundreds of interactions to learn navigation, key-picking, and
-                                    door-opening. However, WorldCoder transfers knowledge from the “door-key”
-                                    environment,
-                                    enabling near-zero-shot generalization by simply synthesizing a new reward function
-                                    given the new text goal.</li> <br>
-                                <li><strong>Sample Efficient Exploration with the Optimistic Objective</strong>: The
-                                    optimistic objective significantly enhances sample-efficient exploration,
-                                    particularly
-                                    in challenging environments like Minigrid and AlfWorld. This approach allows the
-                                    agent
-                                    to discover effective strategies even in sparse-reward scenarios, where exploration
-                                    is
-                                    typically more difficult.</li>
-                            </ul>
-                            <br />
-                            <img src="{{ base_url }}/files/worldcoder/alfworld-result.png" class="interpolation-image"
-                                alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
-                            <br />
-                            <ul style="font-size: 125%;" data-spread="false">
-                                <li><strong>Interpretability</strong>: Programmatic world models offer exceptional
-                                    clarity
-                                    and auditability. By examining the generated code, one can directly see which
-                                    knowledge
-                                    has been acquired and how it is represented. This transparency also highlights where
-                                    additional interactions with the environment are needed to expand the agent's
-                                    understanding.</li>
-                            </ul>
-                            </p>
-                        </div>
+                        <br />
+                        <span style="font-size: 125%;">Additionally, in environments designed to be outside LLM
+                            pretraining corpora, WorldCoder demonstrates its ability to learn novel dynamics, such
+                            as
+                            using teleporters in Sokoban for more efficient problem-solving.</span>
+                        <br />
+                        <br />
+                        <img src="{{ base_url }}/files/worldcoder/minigrid-result.png" class="interpolation-image"
+                            alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
+                        <br />
+                        <ul style="font-size: 125%;" data-spread="false">
+                            <li><strong>Adaptability and Transfer</strong>: WorldCoder excels in adapting and
+                                transferring knowledge to new tasks. For example, solving the “unlock” task from
+                                scratch
+                                typically requires hundreds of interactions to learn navigation, key-picking, and
+                                door-opening. However, WorldCoder transfers knowledge from the “door-key”
+                                environment,
+                                enabling near-zero-shot generalization by simply synthesizing a new reward function
+                                given the new text goal.</li> <br>
+                            <li><strong>Sample Efficient Exploration with the Optimistic Objective</strong>: The
+                                optimistic objective significantly enhances sample-efficient exploration,
+                                particularly
+                                in challenging environments like Minigrid and AlfWorld. This approach allows the
+                                agent
+                                to discover effective strategies even in sparse-reward scenarios, where exploration
+                                is
+                                typically more difficult.</li>
+                        </ul>
+                        <br />
+                        <img src="{{ base_url }}/files/worldcoder/alfworld-result.png" class="interpolation-image"
+                            alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
+                        <br />
+                        <ul style="font-size: 125%;" data-spread="false">
+                            <li><strong>Interpretability</strong>: Programmatic world models offer exceptional
+                                clarity
+                                and auditability. By examining the generated code, one can directly see which
+                                knowledge
+                                has been acquired and how it is represented. This transparency also highlights where
+                                additional interactions with the environment are needed to expand the agent's
+                                understanding.</li>
+                        </ul>
+                        </p>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!--Conclusion-->
