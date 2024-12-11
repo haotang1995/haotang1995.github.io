@@ -120,22 +120,26 @@ title: "WorldCoder"
 
     <!--Introduction-->
     <!--<section class="section">-->
-        <!--<div class="container is-max-widescreen">-->
-            <!--<div class="rows">-->
-                <!--<div class="rows is-centered">-->
-                    <!--<div class="row is-full-width">-->
-                        <!--<div class="content has-text-justified">-->
-                            <span style="font-size: 125%;">
-                                 How could an AI experiment with a new environment, and then very quickly learn how it works and achieve a range of novel goals?
+    <!--<div class="container is-max-widescreen">-->
+    <!--<div class="rows">-->
+    <!--<div class="rows is-centered">-->
+    <!--<div class="row is-full-width">-->
+    <!--<div class="content has-text-justified">-->
+    <span style="font-size: 125%;">
+        How could an AI experiment with a new environment, and then very quickly learn how it works and achieve a range
+        of novel goals?
 
-                                Our agent <strong>programs a world model in code</strong>; explores by <strong>inventing reward functions</strong> it optimistically thinks it can achieve; then <strong>plans to achieve novel goals</strong>.
-                                On certain videogame and robot planning tasks, it learns <strong>10,000x faster than deep RL</strong>, at a <strong>fraction of the LLM cost of ReAct</strong>.
-                            </span>
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+        Our agent <strong>programs a world model in code</strong>; explores by <strong>inventing reward
+            functions</strong> it optimistically thinks it can achieve; then <strong>plans to achieve novel
+            goals</strong>.
+        On certain videogame and robot planning tasks, it learns <strong>10,000x faster than deep RL</strong>, at a
+        <strong>fraction of the LLM cost of ReAct</strong>.
+    </span>
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
     <!--</section>-->
 
     <!--Experiments-->
@@ -147,10 +151,17 @@ title: "WorldCoder"
                         <h2 class="title is-3">Learning a novel variant of Sokoban with teleports</h2>
                         <center>
                             <video controls muted autoplay loop width="40%">
-                              <source src="{{ base_url }}/files/worldcoder/tele-sokoban.webm" type="video/webm" />
+                                <source src="{{ base_url }}/files/worldcoder/tele-sokoban.webm" type="video/webm" />
                             </video>
                         </center>
-                        <center><span style="font-size: 125%; width: 80%;"> WorldCoder learns how to use the teleports and uses it to push the boxes to targets faster.</span></center>
+
+                        <center>
+                            <video controls muted autoplay loop width="40%">
+                                <source src="{{ base_url }}/files/worldcoder/tele-sokoban2.webm" type="video/webm" />
+                            </video>
+                        </center>
+                        <center><span style="font-size: 125%; width: 80%;"> WorldCoder learns how to use the teleports
+                                and uses it to push the boxes to targets faster.</span></center>
                         <br>
                         <h4 class="title is-5">Learned Transition Function</h4>
                         <pre><code class="language-python">class Entity:
@@ -295,7 +306,9 @@ title: "WorldCoder"
                             <img src="{{ base_url}}/files/worldcoder/comparison.png" class="interpolation-image" alt=""
                                 style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
                             <br />
-                            <span style="font-size: 125%; width: 80%;"> Qualitative comparison of WorldCoder against deep model-based RL and LLM agents. (∗LLM agents do not update their world model). </span>
+                            <span style="font-size: 125%; width: 80%;"> Qualitative comparison of WorldCoder against
+                                deep model-based RL and LLM agents. (∗LLM agents do not update their world model).
+                            </span>
                         </div>
                     </div>
                 </div>
