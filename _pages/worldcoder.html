@@ -118,147 +118,25 @@ title: "WorldCoder"
         </div>
     </section>
 
-
-    <section class="section">
-        <div class="container is-max-desktop">
-            <!-- Abstract. -->
-            <div class="columns is-centered has-text-centered">
-                <div class="column">
-                    <h2 class="title is-3">Abstract</h2>
-                    <div class="content has-text-justified">
-                        <p style="font-size: 125%;">
-                            We give a model-based agent that builds a Python program representing its knowledge of the
-                            world based on its interactions with the environment. The world model
-                            tries to explain its interactions, while also being optimistic about what reward it
-                            can achieve. We define this optimism as a logical constraint between a program
-                            and a planner. We study our agent on gridworlds, and on task planning, finding our
-                            approach is more sample-efficient compared to deep RL, more compute-efficient
-                            compared to ReAct-style agents, and that it can transfer its knowledge across
-                            environments by editing its code.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container is-max-desktop">
-            <div class="rows">
-                <div class="rows is-centered">
-                    <div class="row is-full-width">
-                        <div style="text-align: center;">
-                            <img src="{{ base_url}}/files/worldcoder/framework.png" class="interpolation-image" alt=""
-                                style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
-                            <br />
-                            <span style="font-size: 125%;">WorldCoder learns Python programs as the world models.</span>
-                            <br />
-                            <br />
-                            <img src="{{ base_url}}/files/worldcoder/comparison.png" class="interpolation-image" alt=""
-                                style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
-                            <br />
-                            <span style="font-size: 125%; width: 80%;"> Qualitative comparison of WorldCoder against
-                                deep model-based RL and LLM agents. WorldCoder learns and adapts a symbolic world model
-                                with much fewer interactions with the environments. </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!--Introduction-->
-    <section class="section">
-        <div class="container is-max-widescreen">
-            <div class="rows">
-                <div class="rows is-centered">
-                    <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Introduction</span></h2>
-                        <div class="content has-text-justified">
+    <!--<section class="section">-->
+        <!--<div class="container is-max-widescreen">-->
+            <!--<div class="rows">-->
+                <!--<div class="rows is-centered">-->
+                    <!--<div class="row is-full-width">-->
+                        <!--<div class="content has-text-justified">-->
                             <span style="font-size: 125%;">
-                                <p> Humans excel at quickly understanding new environments and unfamiliar tasks,
-                                    leveraging prior knowledge and minimal experience to form actionable insights. Can
-                                    AI achieve a similar level of adaptability and efficiency? Traditional neural-based
-                                    methods often require extensive interactions to solve simple problems. WorldCoder
-                                    addresses these challenges by integrating programmatic inductive biases with world
-                                    model learning. Our agent adaptively learns a symbolic world model as code as shown
-                                    in the above figure. Programmatic representations provide strong inductive biases,
-                                    enabling WorldCoder to learn world models that are more sample-efficient,
-                                    generalizable, and interpretable than neural-based methods. These models also excel
-                                    in adaptability, transferability, and cost-effectiveness compared to traditional LLM
-                                    agents. </p>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                                 How could an AI experiment with a new environment, and then very quickly learn how it works and achieve a range of novel goals?
 
-    <!--Method-->
-    <section class="section">
-        <div class="container is-max-widescreen">
-            <div class="rows">
-                <div class="rows is-centered">
-                    <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">WorldCoder: Learning Python Code as World
-                                Models</span></h2>
-                        <div class="content has-text-justified">
-                            <span style="font-size: 125%;">
-                                WorldCoder builds on the classic model-based agent architecture, learning a world model
-                                that predicts state transitions given current states and actions. The agent iterates
-                                between:
-                                <ul data-spread="false">
-                                    <li> Acting based on the currently learned world model and storing the resulting
-                                        experiences in the replay buffer. </li>
-                                    <li> Updating the world model to align with past experiences. </li>
-                                </ul>
-                                <p> The process stops when the agent solves the problem or when further interactions
-                                    become impossible.</p>
-                                <p> WorldCoder represents the world model as Python code and leverages LLMs to
-                                    synthesize these models. We develop a more efficient adaptive LLM-based code
-                                    refinement method [<a style="color: #61afef;"
-                                        href=" {{base_url}}/projects/rex">REX</a>] to synthesize the transition function
-                                    s' = T(s, a) and the reward function r = R(s, a, s') that fully explain past
-                                    interactions stored in the replay buffer. </p>
+                                Our agent <strong>programs a world model in code</strong>; explores by <strong>inventing reward functions</strong> it optimistically thinks it can achieve; then <strong>plans to achieve novel goals</strong>.
+                                On certain videogame and robot planning tasks, it learns <strong>10,000x faster than deep RL</strong>, at a <strong>fraction of the LLM cost of ReAct</strong>.
                             </span>
-                        </div>
-
-                        <h3 class="title is-4">Optimistic in the Face of Uncertainty </h3>
-                        <div class="content has-text-justified">
-                            <span style="font-size: 125%;">
-                                <p> We further show that programmatic representations with LLM-guided program generation
-                                    are compatible with a pervasive principle for efficient exploration: optimism under
-                                    uncertainty. For instance, consider an agent that has learned to navigate but does
-                                    not know how to open a door to reach its goal (the green square). Classic
-                                    model-based agents might resort to random exploration, which is highly
-                                    sample-inefficient, as shown in the blue trajectory in the figure. </p>
-                                <img src="{{ base_url }}/files/worldcoder/optimistic.png" class="interpolation-image"
-                                    alt="" style="display: block; margin-left: auto; margin-right: auto; width: 70%;" />
-                                <p> In contrast, a more effective approach—much like human problem-solving—is to
-                                    hypothesize and test potential solutions. For example, the agent might imagine that
-                                    the key could unlock the door or that a specific mechanism might bypass it. Each
-                                    hypothesis enables the agent to form a plan that is either correct (solving the
-                                    problem) or incorrect (yielding a new informative counter-example to learn the
-                                    correct world model of the environment). </p>
-                                <p> This behavior exemplifies the principle of optimism under uncertainty. WorldCoder's
-                                    synthesized world models not only align with past experiences but also generate
-                                    actionable plans to achieve goals efficiently. </p>
-                                <img src="{{ base_url }}/files/worldcoder/objective.png" class="interpolation-image"
-                                    alt="" style="display: block; margin-left: auto; margin-right: auto; width: 60%;" />
-                                <p> We also provide a theoretical analysis of the worst-case sample complexity required
-                                    to solve a problem using this optimistic approach. For detailed proofs and
-                                    demonstrations of WorldCoder’s human-like exploratory behavior, please refer to our
-                                    paper (Appendix A).  </p>
-                                <img src="{{ base_url }}/files/worldcoder/theorem.png" class="interpolation-image"
-                                    alt="" style="display: block; margin-left: auto; margin-right: auto; width: 60%;" />
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
 
     <!--Experiments-->
     <section class="section">
@@ -266,55 +144,15 @@ title: "WorldCoder"
             <div class="rows">
                 <div class="rows is-centered">
                     <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Experiments</span></h2>
-                        <div class="content has-text-justified">
-                            <p style="font-size: 125%;">
-                                We study our system in three environments, Sokoban, Minigid, and AlfWorld, with the goal
-                                of understanding the sample efficiency and computational efficiency of the learner,
-                                especially when transferring knowledge across environments, as well as the impact of
-                                optimism under uncertainty. 
-                            </p>
-                        </div>
-                        <p style="font-size: 125%;">
-
-                            The findings highlight several advantages:
-                            <br />
-                            <br />
-                            <img src="{{ base_url }}/files/worldcoder/soko-result.png" class="interpolation-image"
-                                alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
-                            <br />
-                        <ul style="font-size: 125%;" data-spread="false">
-                            <li> <strong>Generalization</strong>: WorldCoder's programmatic world models generalize
-                                effectively to new scenarios, such as adapting from a 2-box Sokoban environment to a
-                                3-box environment without additional training. </li>
-                            <br>
-
-                            <li> <strong>Sample-Efficiency</strong>: While neural-based methods require millions of
-                                interactions, WorldCoder achieves comparable results with just hundreds. </li>
-                            <br>
-                            <li> <strong>Computational Efficiency</strong>: Classic LLM agents like ReAct rely on
-                                frequent LLM queries. In contrast, WorldCoder front-loads LLM use, reducing overall
-                                computational cost. </li>
-                            <br>
-                            How could an AI experiment with a new environment, and then very quickly learn how it works
-                            and achieve a range of novel goals?<br><br>
-
-
-                            Our agent <b> programs a world model in code;</b> explores by inventing reward functions it
-                            optimistically thinks it can achieve; then <b>plans to achieve novel goals.</b>
-                            On certain videogame and robot planning tasks, it learns <b>>10,000x faster than deep
-                                RL,</b> at a
-                            <b>fraction of the LLM cost of ReAct.</b>
-                        </ul>
-                        <br>
+                        <h2 class="title is-3">Learning a novel variant of Sokoban with teleports</h2>
                         <center>
                             <video controls muted autoplay loop width="40%">
-                                <source src="{{ base_url }}/files/worldcoder/tele-sokoban.webm" type="video/webm" />
+                              <source src="{{ base_url }}/files/worldcoder/tele-sokoban.webm" type="video/webm" />
                             </video>
                         </center>
+                        <center><span style="font-size: 125%; width: 80%;"> WorldCoder learns how to use the teleports and uses it to push the boxes to targets faster.</span></center>
                         <br>
-                        <h4 class="title is-5">World Model</h4>
-                        <br>
+                        <h4 class="title is-5">Learned Transition Function</h4>
                         <pre><code class="language-python">class Entity:
         def __init__(self, x, y):
             self.name = self.__class__.__name__
@@ -415,8 +253,7 @@ title: "WorldCoder"
                 return True
         return False</code></pre>
                         <br> <br>
-                        <h4 class="title is-5">Reward Function</h4>
-                        <br>
+                        <h4 class="title is-5">Learned Reward Function</h4>
                         <pre><code>def reward_func(state, action, next_state):
         targets_state = get_entities_by_name(state, 'Target')
         boxes_state = get_entities_by_name(state, 'Box')
@@ -435,81 +272,30 @@ title: "WorldCoder"
         if done:
             reward += 10  # Adding 10 bonus for completing the game
         return reward, done</code></pre>
-
-
-
-                        <!-- <video controls="" muted="" autoplay="" loop="" width="40%">
-                                <source src="{{ base_url }}/files/worldcoder/tele-sokoban.mp4" type="video/mp4">
-                            </video> -->
-
-                        <br />
-                        <span style="font-size: 125%;">Additionally, in environments designed to be outside LLM
-                            pretraining corpora, WorldCoder demonstrates its ability to learn novel dynamics,
-                            such
-                            as
-                            using teleporters in Sokoban for more efficient problem-solving.</span>
-                        <br />
-                        <br />
-                        <img src="{{ base_url }}/files/worldcoder/minigrid-result.png" class="interpolation-image"
-                            alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
-                        <br />
-                        <ul style="font-size: 125%;" data-spread="false">
-                            <li><strong>Adaptability and Transfer</strong>: WorldCoder excels in adapting and
-                                transferring knowledge to new tasks. For example, solving the “unlock” task from
-                                scratch
-                                typically requires hundreds of interactions to learn navigation, key-picking,
-                                and
-                                door-opening. However, WorldCoder transfers knowledge from the “door-key”
-                                environment,
-                                enabling near-zero-shot generalization by simply synthesizing a new reward
-                                function
-                                given the new text goal.</li> <br>
-                            <li><strong>Sample Efficient Exploration with the Optimistic Objective</strong>: The
-                                optimistic objective significantly enhances sample-efficient exploration,
-                                particularly
-                                in challenging environments like Minigrid and AlfWorld. This approach allows the
-                                agent
-                                to discover effective strategies even in sparse-reward scenarios, where
-                                exploration
-                                is
-                                typically more difficult.</li>
-                        </ul>
-                        <br />
-                        <img src="{{ base_url }}/files/worldcoder/alfworld-result.png" class="interpolation-image"
-                            alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
-                        <br />
-                        <ul style="font-size: 125%;" data-spread="false">
-                            <li><strong>Interpretability</strong>: Programmatic world models offer exceptional
-                                clarity
-                                and auditability. By examining the generated code, one can directly see which
-                                knowledge
-                                has been acquired and how it is represented. This transparency also highlights
-                                where
-                                additional interactions with the environment are needed to expand the agent's
-                                understanding.</li>
-                        </ul>
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--Conclusion-->
+
+
     <section class="section">
-        <div class="container is-max-widescreen">
+        <div class="container is-max-desktop">
             <div class="rows">
                 <div class="rows is-centered">
                     <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Conclusion</span></h2>
-                        <div class="content has-text-justified">
-                            <p style="font-size: 125%;">
-                                WorldCoder represents a step forward in creating AI systems that learn efficiently,
-                                adaptively, and transparently. It learns Python code to model the world and act
-                                optimistically, enabling it to efficiently explore and adapt to its environment. While
-                                challenges remain, the integration of LLMs with symbolic reasoning offers a promising
-                                direction for building AI that interacts with the world as seamlessly as humans.
-                            </p>
+                        <div style="text-align: center;">
+                            <img src="{{ base_url}}/files/worldcoder/framework.png" class="interpolation-image" alt=""
+                                style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
+                            <br />
+                            <span style="font-size: 125%;"> Overall agent architecture.</span>
+                            <br />
+                            <br />
+                            <img src="{{ base_url}}/files/worldcoder/comparison.png" class="interpolation-image" alt=""
+                                style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
+                            <br />
+                            <span style="font-size: 125%; width: 80%;"> Qualitative comparison of WorldCoder against deep model-based RL and LLM agents. (∗LLM agents do not update their world model). </span>
                         </div>
                     </div>
                 </div>
