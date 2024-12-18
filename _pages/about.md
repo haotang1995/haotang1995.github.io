@@ -16,10 +16,10 @@ My research interest lies in the generalizability of AI models, in particular, g
 
 * **WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment**\\
   Hao Tang, Darren Key, and Kevin Ellis\\
-  *NeurIPS* 2024 [[arxiv](https://arxiv.org/abs/2402.12275)] [[code](https://github.com/haotang1995/WorldCoder)].
+  *NeurIPS* 2024 [[project](https://haotang1995.github.io/projects/worldcoder)] [[arxiv](https://arxiv.org/abs/2402.12275)] [[code](https://github.com/haotang1995/WorldCoder)].
 * **Code Repair with LLMs gives an Exploration-Exploitation Tradeoff**\\
   Hao Tang, Keya Hu, Jin Peng Zhou, Sicheng Zhong, Wei-Long Zheng, Xujie Si, and Kevin Ellis\\
-  *NeurIPS* 2024 [[arxiv](https://arxiv.org/abs/2405.17503)] [[code](https://github.com/haotang1995/REx)].
+  *NeurIPS* 2024 [[project](https://haotang1995.github.io/projects/rex)] [[arxiv](https://arxiv.org/abs/2405.17503)] [[code](https://github.com/haotang1995/REx)].
 * **From Perception to Programs: Regularize, Overparameterize, and Amortize**\\
   Hao Tang, and Kevin Ellis\\
   *ICML* 2023 [[arxiv](https://arxiv.org/abs/2206.05922)],\\
