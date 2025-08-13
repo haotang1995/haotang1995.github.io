@@ -13,15 +13,29 @@ I am a Ph.D. student at Cornell University, advised by Prof. [Kevin Ellis](https
 My research interest lies in the generalizability of AI models, in particular, generalizing/adapting to out-of-distribution samples (e.g., inputs of larger scales, unseen combinations, and new concepts/domains). I currently focus on neuro-symbolic program synthesis to integrate neural networks with programmatic prior for better generalizability and interpretability. It involves fields such as program synthesis, latent abstraction learning, and learning to optimize. 
 
 ## Publications
-
+* **LLM-Guided Probabilistic Program Induction for POMDP Model Estimation**\\
+  Aidan Curtis, <ins>Hao Tang</ins>, Thiago Veloso, Kevin Ellis, Joshua Tenenbaum, Tom´as Lozano-P´erez, Leslie
+Pack Kaelbling\\
+  *CoRL* 2025 [[arxiv](https://arxiv.org/abs/2505.02216)].
+* **Programmatic Video Prediction Using Large Language Models**\\
+  <ins>Hao Tang</ins>, Kevin Ellis, Suhas Lohit, Michael J Jones, Moitreya Chatterjee\\
+  *ICLR Workshop World Models* 2025 [[arxiv](https://arxiv.org/abs/2505.14948)].
+* **Learning Abstract World Models with Neuro-Symbolic Predicates for Robot Planning**\\
+  Yichao Liang, Nishanth Kumar, <ins>Hao Tang</ins>, Adrian Weller, Joshua B Tenenbaum, Tom Silver, Jo˜ao F
+Henriques, Kevin Ellis\\
+  *ICLR* 2025 [[arxiv](https://arxiv.org/abs/2410.23156)].
+* **Combining Induction and Transduction for Abstract Reasoning**\\
+  Wen-Ding Li\*, Keya Hu\*, Carter Larsen, Yuqing Wu, Simon Alford, Caleb Woo, Spencer M. Dunn,
+<ins>Hao Tang</ins>, Michelangelo Naim, Dat Nguyen, Wei-Long Zheng, Zenna Tavares, Yewen Pu†, Kevin Ellis†\\
+  *ICLR* 2025 & *Best Paper at ARCPrize* [[arxiv](https://arxiv.org/abs/2411.02272)].
 * **WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment**\\
-  Hao Tang, Darren Key, and Kevin Ellis\\
+  <ins>Hao Tang</ins>, Darren Key, and Kevin Ellis\\
   *NeurIPS* 2024 [[project](https://haotang1995.github.io/projects/worldcoder)] [[arxiv](https://arxiv.org/abs/2402.12275)] [[code](https://github.com/haotang1995/WorldCoder)].
 * **Code Repair with LLMs gives an Exploration-Exploitation Tradeoff**\\
-  Hao Tang, Keya Hu, Jin Peng Zhou, Sicheng Zhong, Wei-Long Zheng, Xujie Si, and Kevin Ellis\\
+  <ins>Hao Tang</ins>, Keya Hu, Jin Peng Zhou, Sicheng Zhong, Wei-Long Zheng, Xujie Si, and Kevin Ellis\\
   *NeurIPS* 2024 [[project](https://haotang1995.github.io/projects/rex)] [[arxiv](https://arxiv.org/abs/2405.17503)] [[code](https://github.com/haotang1995/REx)].
 * **From Perception to Programs: Regularize, Overparameterize, and Amortize**\\
-  Hao Tang, and Kevin Ellis\\
+  <ins>Hao Tang</ins>, and Kevin Ellis\\
   *ICML* 2023 [[arxiv](https://arxiv.org/abs/2206.05922)],\\
   *ICML Differentiable Everthing workshop* 2023, *PLDI MAPS symposium* 2022.
 * **Towards Scale-Invariant Graph-related Problem Solving by Iterative Homogeneous GNNs** \\
@@ -42,6 +56,11 @@ My research interest lies in the generalizability of AI models, in particular, g
 * **Multimodal Emotion Recognition Using Deep Neural Networks**\\
   <ins>Hao Tang</ins>, Wei Liu, Wei-Long Zheng, and Bao-Liang Lu\\
   *International Conference on Neural Information Processing (ICONIP)* 2017 [[pdf](https://haotang1995.github.io/files/iconip17.pdf)].
+
+## Preprints
+* **PoE-World: Compositional World Modeling with Products of Programmatic Experts**\\
+  Wasu Top Piriyakulkij, Yichao Liang, <ins>Hao Tang</ins>, Adrian Weller, Marta Kryven, Kevin Ellis\\
+  [[arxiv](https://arxiv.org/abs/2505.10819)].
 
 ## Misc.
 * Top Reviewer of NeurIPS, 2022.
