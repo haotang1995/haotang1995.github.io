@@ -10,7 +10,12 @@ redirect_from:
 
 I am a Ph.D. student at Cornell University working with [Kevin Ellis](https://www.cs.cornell.edu/~ellisk/). I received my bachelor's and master's degrees from Shanghai Jiao Tong University. 
 
-My research interest lies in the generalizability of AI models, in particular, generalizing/adapting to out-of-distribution samples (e.g., inputs of larger scales, unseen combinations, and new concepts/domains). I currently focus on neuro-symbolic program synthesis to integrate neural networks with programmatic prior for better generalizability and interpretability. It involves fields such as program synthesis, latent abstraction learning, and learning to optimize. 
+My work targets sample efficiency and generalizability in AI systems, while also developing computationally efficient methods to address practical challenges. I have worked on LLM-based code generation [[ROAP]](https://haotang1995.github.io/projects/rex) and world modeling [[WorldCoder]](https://arxiv.org/abs/2402.12275), including applications to real robot systems [[POMDPCoder]](https://arxiv.org/abs/2505.02216). Additionally, I improved LLMs' reasoning efficiency through selective attention during my internship at Microsoft Research.
+
+## Preprints
+
+* **Not All Thoughts Matter: Selective Attention for Efficient Reasoning**\\
+  <ins>Hao Tang</ins>, Guoqing Zheng, Kanishk Gandhi, Harkirat Behl, Vaishnavi Shrivastava, Mojan Javaheripi, Kevin Ellis, Shivam Garg, Dimitris Papailiopoulos
 
 ## Publications
 * **LLM-Guided Probabilistic Program Induction for POMDP Model Estimation**\\
@@ -60,7 +65,6 @@ Henriques, Kevin Ellis\\
   <ins>Hao Tang</ins>, Wei Liu, Wei-Long Zheng, and Bao-Liang Lu\\
   *International Conference on Neural Information Processing (ICONIP)* 2017 [[pdf](https://haotang1995.github.io/files/iconip17.pdf)].
 
-## Preprints
-
 ## Misc.
 * Top Reviewer of NeurIPS, 2022.
+* Organizer of ICML Workshop on Assessing World Models
