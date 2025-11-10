@@ -16,6 +16,7 @@ My research pursues sample-efficient and generalizable AI through neuro-symbolic
 
 * **Not All Thoughts Matter: Selective Attention for Efficient Reasoning**\\
   <ins>Hao Tang</ins>, Guoqing Zheng, Kanishk Gandhi, Harkirat Behl, Vaishnavi Shrivastava, Mojan Javaheripi, Kevin Ellis, Shivam Garg, Dimitris Papailiopoulos
+  [[pdf](https://haotang1995.github.io/files/RollingWindowReasoner.pdf)]
 
 ## Publications
 * **LLM-Guided Probabilistic Program Induction for POMDP Model Estimation**\\
